@@ -1,0 +1,1 @@
+This software and accompanying files, including the machine learning model and weights, are proprietary to Andrew Quintana. Unauthorized use, distribution, or modification is prohibited.

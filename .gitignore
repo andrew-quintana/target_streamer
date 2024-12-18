@@ -1,7 +1,5 @@
-.venv/
-logs/
 *.pyc
 __pycache__/
 .vscode
 config.txt
-data/
+.venv
