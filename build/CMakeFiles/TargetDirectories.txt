@@ -1,0 +1,3 @@
+/home/fizz/Projects/target_streamer/build/CMakeFiles/capture.dir
+/home/fizz/Projects/target_streamer/build/CMakeFiles/edit_cache.dir
+/home/fizz/Projects/target_streamer/build/CMakeFiles/rebuild_cache.dir

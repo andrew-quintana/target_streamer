@@ -1,12 +1,14 @@
-# create a library for the camera module
-add_library(camera
-    camera.cpp
-)
+# Camera-specific CMake configuration
+cmake_minimum_required(VERSION 3.10)
 
-# link required libraries
-target_link_libraries(camera
-    raspicam
-)
+# Add the executable
+add_executable(capture capture.cpp)
 
-# specify include directories for the camera module
-target_include_directories(camera PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+# Specify the location of the shared library
+link_directories(/usr/lib/aarch64-linux-gnu/)
+
+# Link against libcamera
+target_link_libraries(capture PRIVATE /usr/lib/aarch64-linux-gnu/libcamera.so)
+
+# Include directories for libcamera headers
+target_include_directories(capture PRIVATE /usr/include/libcamera)

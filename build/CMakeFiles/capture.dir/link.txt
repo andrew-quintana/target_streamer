@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/capture.dir/src/cpp/camera/capture.cpp.o -o capture  -lcamera -lcamera-base 
