@@ -1,0 +1,33 @@
+Start testing: Dec 25 13:57 PST
+----------------------------------------------------------
+1/1 Testing: AllTests
+1/1 Test: AllTests
+Command: "/Users/aq_home/1Projects/target_streamer/build/tests/cpp/test_runner"
+Directory: /Users/aq_home/1Projects/target_streamer/build/tests/cpp
+"AllTests" start time: Dec 25 13:57 PST
+Output:
+----------------------------------------------------------
+Working Directory: /Users/aq_home/1Projects/target_streamer
+OpenCV QR Detector prepared.
+Validator prepared.
+Template image prepared
+Processing: /Users/aq_home/1Projects/target_streamer/data/test/samples/test_light_130.JPG
+No QR codes found!
+Processing: /Users/aq_home/1Projects/target_streamer/data/test/samples/test_light_120.JPG
+No QR codes found!
+Processing: /Users/aq_home/1Projects/target_streamer/data/test/samples/test_110.JPG
+No QR codes found!
+Processing: /Users/aq_home/1Projects/target_streamer/data/test/samples/test_60.JPG
+No QR codes found!
+Processing: /Users/aq_home/1Projects/target_streamer/data/test/samples/test_light_60.JPG
+libc++abi: terminating due to uncaught exception of type cv::Exception: OpenCV(4.10.0) /tmp/opencv-20241204-19770-7mfr1a/opencv-4.10.0/modules/core/src/matrix_wrap.cpp:72: error: (-215:Assertion failed) 0 <= i && i < (int)vv.size() in function 'getMat_'
+
+<end of output>
+Test time =   6.53 sec
+----------------------------------------------------------
+Test Failed.
+"AllTests" end time: Dec 25 13:57 PST
+"AllTests" time elapsed: 00:00:06
+----------------------------------------------------------
+
+End testing: Dec 25 13:57 PST

@@ -1,23 +1,49 @@
-# specify the minimum cmake version
-cmake_minimum_required(VERSION 3.10)
+# ./CMakeLists.txt
 
-# project name
-project(backyard_bird_cam)
 
-# set c++ standard
+cmake_minimum_required(VERSION 3.16)
+project(TargetStreamer)
+enable_testing()
+
+# Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# enable testing
-include(CTest)
+# Define an option to include YOLO
+option(BUILD_YOLO "Build YOLO detector" OFF) # Default is OFF
 
-# add subdirectories for cpp source files
-add_subdirectory(src/cpp/camera)
-add_subdirectory(src/cpp/logger)
-add_subdirectory(tests/cpp_tests)
+# Add subdirectories
+add_subdirectory(src/cpp)
+add_subdirectory(tests/cpp)
 
-# find mutually used packages
-find_package(Python3 REQUIRED)
-find_package(pybind11 REQUIRED)
+# Include directories
+include_directories(/usr/local/include/eigen3)
 
-# Ensure Python from virtual environment is used
-set(PYTHON_EXECUTABLE ${PROJECT_SOURCE_DIR}/.venv/bin/python)
+# Include directories
+include_directories(
+    src/cpp
+    #src/cpp/camera
+    src/cpp/detectors
+    src/cpp/transformations
+    src/cpp/validators
+    src/cpp/utilities
+)
+
+# Add executable
+# Ensure you link the executable only if defined
+if(EXISTS "${CMAKE_SOURCE_DIR}/src/main.cpp")
+    add_executable(main src/main.cpp)
+
+    # Link libraries
+    target_link_libraries(main PRIVATE 
+        detectors 
+        transformations 
+        validators
+        utilities
+        OpenCV
+    )
+
+    if(BUILD_YOLO)
+        target_link_libraries(main PRIVATE torch)
+    endif()
+endif()
