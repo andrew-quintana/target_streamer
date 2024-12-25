@@ -1,6 +1,7 @@
 *.pyc
 __pycache__/
-.vscode
+.vscode/
 config.txt
 stash/
-.venv
+.venv/
+data/
