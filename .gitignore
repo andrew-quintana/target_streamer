@@ -5,4 +5,4 @@ config.txt
 stash/
 .venv/
 data/
-build/
+build/.venv/
