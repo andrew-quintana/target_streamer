@@ -6,3 +6,4 @@ stash/
 .venv/
 data/
 build/.venv/
+.venv
