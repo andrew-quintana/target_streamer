@@ -35,14 +35,14 @@ This repository contains the implementation of a robust QR code detection and pr
 
 ## Progress
 
-### Initial Target File
+### Initial Target File with QR Detection
 ![Target File with QR Detection](media/scoring_target_qr_5_h_result.JPG)
 
 ### Initial Detection and Validation via Template Matching
 ![Initial Detection (including one FP)](media/test_marks_result.JPG)
 ![Detections after Template Matching](media/test_marks_result_tmatch.JPG)
 
-### Output
+### Warped and Cropped Output
 ![Warped and Cropped Output](media/output_warped_cropped.JPG)
 
 ## Future Work
